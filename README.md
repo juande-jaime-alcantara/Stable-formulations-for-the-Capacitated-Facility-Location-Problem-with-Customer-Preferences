@@ -96,10 +96,10 @@ Pref:   [(i j) preference_rank ...]
 <p>The instances were generated using a Mosel script with random data. The experimental setup is:</p>
 
 <ul>
-  <li>Number of customers: 50</li>
-  <li>Number of plants: 5 and 10</li>
-  <li>Plant capacities: 12 and 20</li>
-  <li>Number of instances per parameter tuple: 5</li>
+  <li>Number of customers: 50 and 100</li>
+  <li>Number of plants: 5, 10, 15, and 20</li>
+  <li>Plant capacities: 12 and 20 for 50 customers; 24 and 40 for 100 customers</li>
+  <li>Number of instances per parameter configuration: 5</li>
 </ul>
 
 <p>Random generation details:</p>
