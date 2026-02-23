@@ -93,11 +93,11 @@ Pref:   [(i j) preference_rank ...]
 
 <h2>▶️ Using the models</h2>
 
-<p>The Mosel files inside <code>Models/</code> implement the stable formulations introduced in the article.</p>
+<p>The Mosel files inside <code>models/</code> implement the stable formulations introduced in the article.</p>
 
 <ol>
   <li>Open one of the <code>.mos</code> files in FICO Xpress Mosel.</li>
-  <li>Select a <code>.dat</code> instance from the <code>Instances/</code> folder.</li>
+  <li>Select a <code>.dat</code> instance from the <code>instances/</code> folder.</li>
   <li>Execute the model to obtain the selected facilities, the allocation of customers and the objective value.</li>
 </ol>
 
