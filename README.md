@@ -1,53 +1,135 @@
-# Facility location with customer preferences — Supporting Dataset
+<!DOCTYPE html>
+<html lang="en">
 
-This repository provides the supplementary dataset for the article on
-facility location with customer preferences.
+<h1>Stable formulations for the Capacitated Facility Location Problem with Customer Preferences — Supporting Material</h1>
 
-It contains the random `.dat` instances used in the computational
-experiments reported in the paper, provided to ensure transparency
-and reproducibility of the results.
+<p>This repository contains the supplementary material associated with the article:</p>
 
----
+<p><strong><em>“Stable formulations for the Capacitated Facility Location Problem with Customer Preferences”</em></strong></p>
 
-## 📁 Instances
+<p>
+<strong>Authors</strong><br>
+Concepción Domínguez – University of Murcia (UM), Spain<br>
+Juan de Dios Jaime-Alcántara – University of Murcia (UM), Spain
+</p>
 
-All data files are located in the folder `instances/`.
+<hr>
 
-The instances follow the naming convention:
+<h2>📁 Repository structure</h2>
 
-`CSPLPO_n_m_q_i.dat`
+<pre><code>Instances/
+Models/
+README.md
+</code></pre>
 
-where:
+<ul>
+  <li><code>Instances/</code>: Randomly generated instances used in the computational experiments of the article.</li>
+  <li><code>Models/</code>: Mosel/Xpress model files implementing the MILP formulations presented in the paper.</li>
+  <li><code>README.md</code>: Description of the repository structure, instance format and usage instructions.</li>
+</ul>
 
-- `n` is the number of plants,
-- `m` is the number of customers,
-- `q` is the plant capacity,
-- `i` is the instance identifier.
+<hr>
 
-For each combination of parameters `(n, m, q)`, five randomly generated
-instances are included.
+<h2>📄 Instance naming convention</h2>
 
----
+<p>Each instance follows the naming format:</p>
 
-## 📄 Format of the `.dat` files
+<pre><code>CSPLPO_n_m_q_s.dat
+</code></pre>
 
-Each instance is provided in plain text format and can be directly used
-within optimization models implemented in Mosel/Xpress.
+<ul>
+  <li><code>n</code>: number of customers</li>
+  <li><code>m</code>: number of plants (facilities)</li>
+  <li><code>q</code>: capacity assigned to each plant</li>
+  <li><code>s</code>: instance index (five instances are provided for each parameter tuple)</li>
+</ul>
 
-The files contain the parameters defining the facility location problem,
-including problem dimensions, costs, capacities, and preference-related
-data as described in the article.
+<p>Example:</p>
 
----
+<pre><code>CSPLPO_50_5_12_1.dat
+</code></pre>
 
-## 📝 Citation
+<hr>
 
-If you use these instances, please cite the corresponding article:
+<h2>📄 Format of the <code>.dat</code> files</h2>
 
-```bibtex
-@article{to_be_completed,
-  title   = {Article title},
-  author  = {Authors},
-  journal = {Journal},
-  year    = {Year}
+<p>Each instance is provided in plain text format and contains:</p>
+
+<ul>
+  <li><code>nI</code>: number of customers</li>
+  <li><code>nJ</code>: number of plants</li>
+  <li><code>CapsJ</code>: common capacity parameter used in the generation</li>
+  <li><code>nIns</code>: instance index</li>
+  <li><code>CostJ</code>: opening cost of each plant</li>
+  <li><code>CapJ</code>: vector of plant capacities</li>
+  <li><code>CostIJ</code>: assignment cost matrix</li>
+  <li><code>Pref</code>: strict preference ranking of plants for each customer</li>
+</ul>
+
+<p>General structure:</p>
+
+<pre><code>nI: &lt;number_of_customers&gt;
+nJ: &lt;number_of_plants&gt;
+CapsJ: &lt;capacity_parameter&gt;
+nIns: &lt;instance_index&gt;
+
+CostJ: [(j) cost_j ...]
+CapJ:  [(j) capacity_j ...]
+
+CostIJ: [(i j) assignment_cost ...]
+Pref:   [(i j) preference_rank ...]
+</code></pre>
+
+<h3>Meaning of the parameters</h3>
+
+<ul>
+  <li><code>CostJ[j]</code>: fixed cost of opening plant j.</li>
+  <li><code>CapJ[j]</code>: capacity of plant j. In the generated instances, all entries are equal to <code>CapsJ</code>.</li>
+  <li><code>CostIJ[i j]</code>: cost of assigning customer i to plant j.</li>
+  <li><code>Pref[i j]</code>: position of plant j in the strict ranking of customer i (lower values indicate higher preference).</li>
+</ul>
+
+<hr>
+
+<h2>▶️ Using the models</h2>
+
+<p>The Mosel files inside <code>Models/</code> implement the stable formulations introduced in the article.</p>
+
+<ol>
+  <li>Open one of the <code>.mos</code> files in FICO Xpress Mosel.</li>
+  <li>Select a <code>.dat</code> instance from the <code>Instances/</code> folder.</li>
+  <li>Execute the model to obtain the selected facilities, the allocation of customers and the objective value.</li>
+</ol>
+
+<p>Each model corresponds to a specific stability concept:</p>
+
+<ul>
+  <li>Customer stable allocations</li>
+  <li>Pairwise stable allocations</li>
+  <li>Cyclic-coalition stable allocations</li>
+</ul>
+
+<hr>
+
+<h2>🧪 Instance generation (summary)</h2>
+
+<ul>
+  <li>Opening costs were generated as integer values in a predefined range.</li>
+  <li>Assignment costs were generated as random integers.</li>
+  <li>Each customer has a complete strict ranking over all plants.</li>
+  <li>Five instances were generated for each combination of parameters.</li>
+</ul>
+
+<hr>
+
+<h2>📝 Citation</h2>
+
+<pre><code>@article{dominguez2026stable,
+  title   = {Stable formulations for the Capacitated Facility Location Problem with Customer Preferences},
+  author  = {Domínguez, Concepción and Jaime-Alcántara, Juan de Dios},
+  journal = {Preprint},
+  year    = {2026}
 }
+</code></pre>
+
+</html>
