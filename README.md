@@ -91,28 +91,6 @@ Pref:   [(i j) preference_rank ...]
 
 <hr>
 
-<h2>🧪 Instance generation</h2>
-
-<p>The instances were generated using a Mosel script with random data. The experimental setup is:</p>
-
-<ul>
-  <li>Number of customers: 50 and 100</li>
-  <li>Number of plants: 5, 10, 15, and 20</li>
-  <li>Plant capacities: 12 and 20 for 50 customers; 24 and 40 for 100 customers</li>
-  <li>Number of instances per parameter configuration: 5</li>
-</ul>
-
-<p>Random generation details:</p>
-
-<ul>
-  <li>Opening costs were generated as integers between 100 and 130.</li>
-  <li>Assignment costs were generated as integers between 10 and 30.</li>
-  <li>Each customer receives a random permutation representing a strict ranking over all plants.</li>
-  <li>A fixed random seed (<code>setrandseed(3)</code>) was used to ensure reproducibility.</li>
-</ul>
-
-<hr>
-
 <h2>▶️ Using the models</h2>
 
 <p>The Mosel files inside <code>Models/</code> implement the stable formulations introduced in the article.</p>
