@@ -17,14 +17,14 @@ Juan de Dios Jaime-Alcántara – University of Murcia (UM), Spain
 
 <h2>📁 Repository structure</h2>
 
-<pre><code>Instances/
-Models/
+<pre><code>instances/
+models/
 README.md
 </code></pre>
 
 <ul>
-  <li><code>Instances/</code>: Randomly generated instances used in the computational experiments of the article.</li>
-  <li><code>Models/</code>: Mosel/Xpress model files implementing the MILP formulations presented in the paper.</li>
+  <li><code>instances/</code>: Randomly generated instances used in the computational experiments of the article.</li>
+  <li><code>models/</code>: Mosel/Xpress model files implementing the MILP formulations presented in the paper.</li>
   <li><code>README.md</code>: Description of the repository structure, instance format and usage instructions.</li>
 </ul>
 
