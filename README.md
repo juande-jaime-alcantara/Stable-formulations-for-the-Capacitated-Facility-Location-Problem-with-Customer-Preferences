@@ -123,7 +123,7 @@ Pref:   [(i j) preference_rank ...]
   <li>Execute the model to obtain the selected facilities, the allocation of customers and the objective value.</li>
 </ol>
 
-<p>Each model corresponds to a specific stability concept:</p>
+<p>Each stability concept is studied through two formulations: an initial formulation and an improved (Pro) formulation.</p>
 
 <ul>
   <li>Customer stable allocations</li>
