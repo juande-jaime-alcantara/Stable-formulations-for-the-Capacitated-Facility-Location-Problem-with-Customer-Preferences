@@ -30,12 +30,14 @@ README.md
 
 <hr>
 
-<h2>📄 Instance naming convention</h2>
+<h2>📄 Instance format and naming</h2>
 
 <p>Each instance follows the naming format:</p>
 
 <pre><code>CSPLPO_n_m_q_s.dat
 </code></pre>
+
+<h3>Naming convention</h3>
 
 <ul>
   <li><code>n</code>: number of customers</li>
@@ -49,9 +51,7 @@ README.md
 <pre><code>CSPLPO_50_5_12_1.dat
 </code></pre>
 
-<hr>
-
-<h2>📄 Format of the <code>.dat</code> files</h2>
+<h3>File structure</h3>
 
 <p>Each instance is provided in plain text format and contains:</p>
 
