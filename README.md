@@ -84,9 +84,31 @@ Pref:   [(i j) preference_rank ...]
 
 <ul>
   <li><code>CostJ[j]</code>: fixed cost of opening plant j.</li>
-  <li><code>CapJ[j]</code>: capacity of plant j. In the generated instances, all entries are equal to <code>CapsJ</code>.</li>
+  <li><code>CapJ[j]</code>: capacity of plant j (all entries equal to <code>CapsJ</code>).</li>
   <li><code>CostIJ[i j]</code>: cost of assigning customer i to plant j.</li>
   <li><code>Pref[i j]</code>: position of plant j in the strict ranking of customer i (lower values indicate higher preference).</li>
+</ul>
+
+<hr>
+
+<h2>🧪 Instance generation</h2>
+
+<p>The instances were generated using a Mosel script with random data. The experimental setup is:</p>
+
+<ul>
+  <li>Number of customers: 50</li>
+  <li>Number of plants: 5 and 10</li>
+  <li>Plant capacities: 12 and 20</li>
+  <li>Number of instances per parameter tuple: 5</li>
+</ul>
+
+<p>Random generation details:</p>
+
+<ul>
+  <li>Opening costs were generated as integers between 100 and 130.</li>
+  <li>Assignment costs were generated as integers between 10 and 30.</li>
+  <li>Each customer receives a random permutation representing a strict ranking over all plants.</li>
+  <li>A fixed random seed (<code>setrandseed(3)</code>) was used to ensure reproducibility.</li>
 </ul>
 
 <hr>
@@ -107,17 +129,6 @@ Pref:   [(i j) preference_rank ...]
   <li>Customer stable allocations</li>
   <li>Pairwise stable allocations</li>
   <li>Cyclic-coalition stable allocations</li>
-</ul>
-
-<hr>
-
-<h2>🧪 Instance generation (summary)</h2>
-
-<ul>
-  <li>Opening costs were generated as integer values in a predefined range.</li>
-  <li>Assignment costs were generated as random integers.</li>
-  <li>Each customer has a complete strict ranking over all plants.</li>
-  <li>Five instances were generated for each combination of parameters.</li>
 </ul>
 
 <hr>
