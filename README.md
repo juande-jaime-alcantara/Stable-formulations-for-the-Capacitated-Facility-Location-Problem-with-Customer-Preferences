@@ -10,7 +10,7 @@
 <p>
 <strong>Authors</strong><br>
 Concepción Domínguez – University of Murcia (UM), Spain<br>
-Juan de Dios Jaime-Alcántara – University of Murcia (UM), Spain
+Juan de Dios Jaime-Alcántara – Universidad Miguel Hernández de Elche (UMH), Spain<br>
 </p>
 
 <hr>
