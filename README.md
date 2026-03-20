@@ -108,9 +108,7 @@ Pref:   [(i j) preference_rank ...]
 
 <ul>
   <li><code>WeaklyStable</code>: the stability concept considered.</li>
-  <li><code>Calvete</code>: the model family used.</li>
-  <li><code>xcontinua</code>: the version where the <code>x</code> variables are treated as continuous.</li>
-  <li><code>p_60</code>: the instance identifier.</li>
+  <li><code>p_60</code>: the instance identifier, in this case $P_60$.</li>
 </ul>
 
 <h3>Solution file structure</h3>
