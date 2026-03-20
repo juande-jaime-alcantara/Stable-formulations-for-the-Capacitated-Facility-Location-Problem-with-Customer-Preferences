@@ -122,10 +122,9 @@ Pref:   [(i j) preference_rank ...]
 <p>Then the values of the decision variables are listed explicitly. A typical file may contain variables such as:</p>
 
 <ul>
-  <li><code>y[j]</code>: equals 1 if facility j is open, and 0 otherwise.</li>
-  <li><code>x[i,j]</code>: assignment variable indicating whether customer i is assigned to facility j.</li>
-  <li><code>u[j]</code>: auxiliary binary variable used in the formulation.</li>
-  <li><code>v[i,j]</code>: auxiliary binary variable associated with the stability constraints.</li>
+  <li><code>y[j]</code>: binary variable indicating whether facility <code>j</code> is open.</li>
+  <li><code>x[i,j]</code>: binary variable indicating whether customer <code>i</code> is assigned to facility <code>j</code>.</li>
+  <li>Auxiliary variables: formulation-dependent variables introduced to model the corresponding stability conditions.</li>
 </ul>
 
 <p>Example:</p>
