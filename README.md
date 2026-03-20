@@ -26,7 +26,7 @@ README.md
 <ul>
   <li><code>instances/</code>: Randomly generated instances used in the computational experiments of the article.</li>
   <li><code>models/</code>: Mosel/Xpress model files implementing the MILP formulations presented in the paper.</li>
-  <li><code>solutions/</code>: Solution files associated with the tested instances and formulations.</li>
+  <li><code>solutions/</code>: Solution files associated with the tested instances.</li>
   <li><code>README.md</code>: Description of the repository structure, instance format, solution format, and usage instructions.</li>
 </ul>
 
@@ -99,7 +99,7 @@ Pref:   [(i j) preference_rank ...]
 
 <h3>Naming convention</h3>
 
-<p>Each solution file is named according to the formulation, the reference model, the variable setting, and the instance. For example:</p>
+<p>Solution files are named according to the stability concept, the model family, the variable setting, and the instance. For example:</p>
 
 <pre><code>SOL_WeaklyStable_Pro_Calvete_xcontinua_p_60.dat
 </code></pre>
@@ -108,8 +108,7 @@ Pref:   [(i j) preference_rank ...]
 
 <ul>
   <li><code>WeaklyStable</code>: the stability concept considered.</li>
-  <li><code>Pro</code>: the improved formulation.</li>
-  <li><code>Calvete</code>: the reference/base model used in the implementation.</li>
+  <li><code>Calvete</code>: the model family used.</li>
   <li><code>xcontinua</code>: the version where the <code>x</code> variables are treated as continuous.</li>
   <li><code>p_60</code>: the instance identifier.</li>
 </ul>
@@ -126,9 +125,9 @@ Pref:   [(i j) preference_rank ...]
 
 <ul>
   <li><code>y[j]</code>: equals 1 if facility j is open, and 0 otherwise.</li>
-  <li><code>x[j,i]</code> or <code>x[i,j]</code>: assignment variable indicating whether customer i is assigned to facility j.</li>
+  <li><code>x[i,j]</code>: assignment variable indicating whether customer i is assigned to facility j.</li>
   <li><code>u[j]</code>: auxiliary binary variable used in the formulation.</li>
-  <li><code>v[i,j]</code>: auxiliary binary variable associated with stability restrictions.</li>
+  <li><code>v[i,j]</code>: auxiliary binary variable associated with the stability constraints.</li>
 </ul>
 
 <p>Example:</p>
@@ -146,7 +145,7 @@ v[1,3] 1
 ...
 </code></pre>
 
-<p>These files provide the complete optimizer output for the corresponding formulation-instance pair, allowing the user to identify the selected facilities, customer assignments, and auxiliary decisions required by the stability model.</p>
+<p>These files provide the complete optimizer output for the corresponding instance, allowing the user to identify the selected facilities, customer assignments, and auxiliary decisions required by the formulation.</p>
 
 <hr>
 
@@ -157,11 +156,11 @@ v[1,3] 1
 <ol>
   <li>Open one of the <code>.mos</code> files in FICO Xpress Mosel.</li>
   <li>Select a <code>.dat</code> instance from the <code>instances/</code> folder.</li>
-  <li>Execute the model to obtain the selected facilities, the allocation of customers, and the objective value.</li>
-  <li>Consult the corresponding file in <code>solutions/</code> if you want to inspect the full solution associated with a formulation-instance pair.</li>
+  <li>Execute the model to obtain the selected facilities, the customer allocation, and the objective value.</li>
+  <li>Consult the corresponding file in <code>solutions/</code> to inspect the full solution associated with an instance.</li>
 </ol>
 
-<p>Each stability concept is studied through two formulations: an initial formulation and an improved (Pro) formulation.</p>
+<p>The repository includes formulations for the following stability concepts:</p>
 
 <ul>
   <li>Weakly stable allocations</li>
