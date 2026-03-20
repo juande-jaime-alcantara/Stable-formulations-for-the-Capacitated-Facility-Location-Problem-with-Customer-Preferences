@@ -108,7 +108,7 @@ Pref:   [(i j) preference_rank ...]
 
 <ul>
   <li><code>WeaklyStable</code>: the stability concept considered.</li>
-  <li><code>p_60</code>: the instance identifier, in this case $P_60$.</li>
+  <li><code>p_60</code>: the instance identifier corresponding to instance 60.</li>
 </ul>
 
 <h3>Solution file structure</h3>
