@@ -3,6 +3,8 @@
 
 <h1>Stable formulations for the Capacitated Facility Location Problem with Customer Preferences — Supporting Material</h1>
 
+[![DOI](https://zenodo.org/badge/1161805685.svg)](https://doi.org/10.5281/zenodo.19127602)
+
 <p>This repository contains the supplementary material associated with the article:</p>
 
 <p><strong><em>“Stable formulations for the Capacitated Facility Location Problem with Customer Preferences”</em></strong></p>
