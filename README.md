@@ -217,13 +217,15 @@ x[1,6] 1
 <h2>📝 Citation</h2>
 
 <pre><code>@article{dominguez2026stable,
-  title   = {Stable formulations for the {Capacitated} {Facility} {Location} {Problem} with {Customer} {Preferences}},
-  author  = {Dom{\'i}nguez, Concepci{\'o}n and Jaime-Alc{\'a}ntara, Juan de Dios},
+  title = {Stable Formulations for the {{Capacitated Facility Location Problem}} with {{Customer Preferences}}},
+  author = {Dom{\'i}nguez, Concepci{\'o}n and {Jaime-Alc{\'a}ntara}, Juan de Dios},
+  year = 2026,
+  month = jul,
   journal = {European Journal of Operational Research},
-  year    = {2026},
-  month   = jul,
-  doi     = {10.1016/j.ejor.2026.07.001}
+  issn = {0377-2217},
+  doi = {10.1016/j.ejor.2026.07.001}
 }
+  
 
 </code></pre>
 
